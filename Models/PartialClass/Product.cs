@@ -16,7 +16,7 @@ namespace HtmlHelper_annotationLab.Models.PartialClass
 
         [Required(ErrorMessage = "Product name is required.")]
         [Display(Name = "Product Name")]
-        [StringLength(30, ErrorMessage = "The {0} must be between {2} and {1} characters.", MinimumLength = 5)]
+		[wordCount(3, ErrorMessage = "Product name should not exceed 3 words")]
         public object ProductName { get; set; }
 
         [Required(ErrorMessage = "Unit price is required.")]
